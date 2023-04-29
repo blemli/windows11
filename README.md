@@ -16,7 +16,9 @@ Let's fix this!
 >5. `irm https://github.com/blemli/windows11/Optimize-Windows.ps1 | iex`
 
 ## note
-- this does heavy modifications of the system
+- It's best to run this on a really fresh Windows Install
+- Enable Virtualization in BIOS: UEFI BIOS (Advanced > CPU Configuration > SVM Mode or VirtualizationTechnology --> enabled
+- this does heavy modifications of your system
 - The computer might restart multiple times during optimization
 - Your input might be required
 
@@ -24,9 +26,13 @@ Let's fix this!
 To help you decide if you should use this Script here are some of my opinions that inform it:
 - Unclutter: I don't need 10 (bad) ways to do something, just one good one
 - A Time and a Place: Start-Menu  for Programs, TaskBar only for *running* programs, Desktop only for files
-- avoid microsoft login at all cost: Its my device, I don't want to authenticate with microsoft to install stuff. ergo no Store!
-- convention > configuration. Uniformity is fast and breezy
+- avoid microsoft login at all cosast: Its my device, I don't want to authenticate with microsoft to install stuff. ergo no Store!
+- convention > configuration. Uniformity makes working fast and breezy
 
 ## content
 - [Microsoft.PowerShell_profile.ps1](assets/Microsoft.PowerShell_profile.ps1) Powershell Profile
 - [policies.json](assets/policies.json) Firefox Configuration
+- [Win10-Initial-Setup-Script](Win10-Initial-Setup-Script\Win10.psm1) Many useful functions
+- [settings.json](settings.json) Windows Terminal Presets
+
+## what it does in detail
