@@ -10,10 +10,13 @@ Let's fix this!
 
 ## how to use it
 >1. open an **elevated** powershell
->2. download ps7: `iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"`
->3. `pwsh`
->4. `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
->5. `irm https://github.com/blemli/windows11/Optimize-Windows.ps1 | iex`
+>2. `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+>3. `irm blem.li/win11 | iex`
+
+
+>? download ps7: `iex "& { $(irm https://aka.ms/install-powershell.ps1) } 
+
+
 
 ## note
 - It's best to run this on a really fresh Windows Install
@@ -23,13 +26,13 @@ Let's fix this!
 - Your input might be required
 
 ## opininons
-To help you decide if you should use this Script here are some of my opinions that inform it:
+To help you decide if you should use this Script here are some of my opinions that formed it:
 - Unclutter: I don't need 10 (bad) ways to do something, just one good one
 - A Time and a Place: Start-Menu  for Programs, TaskBar only for *running* programs, Desktop only for files
-- avoid microsoft login at all cosast: Its my device, I don't want to authenticate with microsoft to install stuff. ergo no Store!
+- avoid microsoft login at all cost: Its my device, I don't want to authenticate with microsoft to install stuff. ergo no Store!
 - convention > configuration. Uniformity makes working fast and breezy
 
-## content
+## repo content
 - [Microsoft.PowerShell_profile.ps1](assets/Microsoft.PowerShell_profile.ps1) Powershell Profile
 - [policies.json](assets/policies.json) Firefox Configuration
 - [Win10-Initial-Setup-Script](Win10-Initial-Setup-Script\Win10.psm1) Many useful functions
