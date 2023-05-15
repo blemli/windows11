@@ -240,9 +240,9 @@ Function Optimize-Windows {#todo: workflow?
     # Remove German Keyboard
     # Rationale: When choosing de-CH as Keyboard Layout, Windows also adds de-DE.
     # This is not needed and only clutters the tray.
-    $1 = Get-WinUserLanguageList
-    $1.RemoveAll( { $args[0].LanguageTag -clike 'de-DE' } )
-    Set-WinUserLanguageList $1 -Force
+    $LanguageList = Get-WinUserLanguageList
+    $LanguageList.RemoveAll( { $args[0].LanguageTag -clike 'de-DE' } )
+    Set-WinUserLanguageList $LanguageList -Force
     Update-Progress -Activity "Remove German Keyboard" -Rationale "we are swiss"
     
     
@@ -364,6 +364,19 @@ Function Optimize-Windows {#todo: workflow?
 
     Install-WindowsUpdate
     Update-Progress -Activity "Install Windows Updates" -Rationale "downloading them is not enough"
+    
+    Update-Help
+    Update-Progress -Activity "Update Powershell Help" -Rationale "Update is always good"
+    
+    Set-Alias  set-alias open ii
+    Update-Progress -Activity "Set Alias 'open' for 'Invoke-Item'" -Rationale "linux & mac users should feel at home"
+    
+    set-alias touch New-Item
+    Update-Progress -Activity "Set Alias 'touch' for 'New-Item'" -Rationale "linux & mac users should feel at home"
+    
+    #todo: function ll(){Get-Childitem -Hidden}
+    #todo: scoop checkup --> fixes
+    #todo: remove desktop clutter
 
     Enable-Resume
     Checkpoint-Workflow
