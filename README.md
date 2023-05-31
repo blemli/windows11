@@ -39,3 +39,10 @@ To help you decide if you should use this Script here are some of my opinions th
 - [settings.json](settings.json) Windows Terminal Presets
 
 ## what it does in detail
+
+
+
+## todo
+
+- after google drive: `Remove-Item -Path "$env:USERPROFILE\Desktop\Google*.lnk"`
+- set boring background
