@@ -1,0 +1,23 @@
+{
+    "policies": {
+        "OfferToSaveLogins": false,
+        "PasswordManagerEnabled": false,
+        "DisablePocket": true,
+        "DisableFirefoxStudies":true,
+        "NoDefaultBookmarks":true,
+        "DisableFirefoxAccounts":true,
+        "Extensions": {
+            "Install": [
+                "https://addons.mozilla.org/firefox/downloads/file/4101836/i_dont_care_about_cookies-3.4.7.xpi", 
+                "https://addons.mozilla.org/firefox/downloads/file/4099241/1password_x_password_manager-2.10.0.xpi",
+                "https://addons.mozilla.org/firefox/downloads/file/4102426/adblock_plus-3.17.xpi"
+            ]
+        },
+        "Preferences": {
+            "accessibility.force_disabled": {
+                "Value": 1,
+                "Status": "default"
+            }
+        }
+    }
+}
